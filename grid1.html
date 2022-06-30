@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>grid 2</title>
+</head>
+<style>
+
+    #container{
+
+        display: grid;
+        margin: auto;   
+        width:60%;
+        gap:20px;
+        grid-template-columns: repeat(3,200px);
+        grid-template-rows: repeat(3,150px);
+        margin-top: 30px;
+        grid-template-areas: 
+          
+        "a a b b"
+        "c d d d"
+        "e e e e"
+        ;
+       
+    }
+    #container>div{
+     
+      background-color: rgb(68,68,68);
+      align-items: center;
+      /* justify-content: center;
+      align-items: center; */
+      border-radius: 10px;
+      
+      
+
+    }
+
+    #container>div>p{
+        font-size: 30px;
+        color: white;
+        justify-content: center;
+        align-items: flex-start;
+        margin-left: 10px;
+    }
+
+
+#container>div:nth-child(1){
+    grid-area: a;
+
+}
+#container>div:nth-child(2){
+    grid-area: b;
+
+}
+#container>div:nth-child(3){
+    grid-area: c;
+
+}
+#container>div:nth-child(4){
+    grid-area: d;
+
+}
+#container>div:nth-child(5){
+    grid-area: e;
+
+}
+
+</style>
+<body>
+
+    
+    <div id ="container">
+    <div><p>A</p></div>
+    <div><p>B</p></div>
+    <div><p>C</p></div>
+    <div><p>D</p></div>
+    <div><p>B</p></div>
+</div>
+</body>
+</html>
